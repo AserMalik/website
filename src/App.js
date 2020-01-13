@@ -1,11 +1,32 @@
-import React from "react";
-import "./styles.css";
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+
+export var section;
+export var card;
 
 export default function App() {
+  return <div className="App" />;
+}
+
+section = title => {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+    <div className="section">
+      <h1>{title}</h1>
     </div>
   );
-}
+};
+
+card = (title, type) => {
+  return (
+    <div className="card">
+      <div className="card-context-image" />
+      <div className="card-context-info">
+        <p className="card-title">{title}</p>
+        <ul className="card-subtitle">
+          <li>{type[0]}</li>
+          <li>{type[1]}</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
