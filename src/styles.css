@@ -1,3 +1,46 @@
+body {
+  background: #003d66;
+  font-family: Perpetua Light;
+  color: white;
+}
+
+.page-title {
+  font: bold;
+  font-size: 1.3rem;
+  color: white;
+}
+
 .App {
-  font-family: sans-serif;
+  position: absolute;
+  width: 95%;
+  height: 77%;
+  top: 13%;
+  left: 50%;
+  border: solid red 5px; /*debug setting*/
+  transform: translate(-50%, 0%);
+  padding-left: 15px;
+  display: grid;
+  grid-template-rows: 97%;
+  grid-template-columns: repeat(3, 37%);
+  grid-column-gap: 5rem;
+  overflow-y: scroll;
+}
+
+@media only screen and (max-width: 768px) {
+  .App {
+    border: solid white 5px;
+  }
+}
+
+.section-major {
+  font: bold;
+  font-size: 1.3rem;
+  margin-top: -1rem;
+  border: solid green 5px;
+  margin: 0.76rem;
+}
+
+.card {
+  font-size: 1.1rem;
+  border: solid white 5px;
 }

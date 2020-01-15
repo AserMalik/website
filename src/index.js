@@ -4,4 +4,10 @@ import App from "./App.js";
 
 const rootElement = document.getElementById("root");
 
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+  <div>
+    <p className="page-title">Title</p>
+    <App />
+  </div>,
+  rootElement
+);

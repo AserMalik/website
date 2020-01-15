@@ -18,13 +18,24 @@ var test = [7, "Hello World"];
 ////////////*/
 
 Section = props => {
-  return (
-    <div className="section">
-      <h1>{props.title}</h1>
-      {props.children}
-    </div>
-  );
+  switch (props.type) {
+    case "major":
+      return (
+        <div className="section-major">
+          <h1>{props.title}</h1>
+          {props.children}
+        </div>
+      );
+    default:
+      return (
+        <div className="section-minor">
+          <h1>{props.title}</h1>
+          {props.children}
+        </div>
+      );
+  }
 };
+//this should ideally be more modular but it's very small so I avoided it
 
 Card = (title, cardDetails) => {
   const listCardDetails = Array.from(cardDetails).map(cardDetails => (
@@ -44,7 +55,7 @@ Card = (title, cardDetails) => {
 export default function App() {
   return (
     <div className="App">
-      <Section title="Hello World!">
+      <Section title="Hello World!" type="major">
         {Card("1", test)}
         {Card("3", ["4", "2"])}
       </Section>
