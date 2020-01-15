@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 //import ReactDOM from "react-dom";
-import { Button } from "antd";
+
 import "./styles.css";
 
-export var section;
-export var card;
+export var Section;
+export var Card;
 
 var test = [7, "Hello World"];
 /*context data
@@ -17,34 +17,18 @@ var test = [7, "Hello World"];
 //////////////
 ////////////*/
 
-export default function App() {
-  return (
-    <div className="App">
-      <Button type="primary">Hello</Button>
-      {section("Hello World!")}
-      {card("1", test)}
-      {card("3", "4321")}
-      {section("Hello World!")}
-      {card("1", test)}
-      {card("3", "4321")}
-      {section("Hello World!")}
-      {card("1", test)}
-      {card("3", "4321")}
-    </div>
-  );
-}
-
-section = title => {
+Section = props => {
   return (
     <div className="section">
-      <h1>{title}</h1>
+      <h1>{props.title}</h1>
+      {props.children}
     </div>
   );
 };
 
-card = (title, cardDetails) => {
+Card = (title, cardDetails) => {
   const listCardDetails = Array.from(cardDetails).map(cardDetails => (
-    <li>{cardDetails}</li>
+    <li key={cardDetails.toString()}>{cardDetails}</li>
   ));
   return (
     <div className="card">
@@ -56,3 +40,22 @@ card = (title, cardDetails) => {
     </div>
   );
 };
+
+export default function App() {
+  return (
+    <div className="App">
+      <Section title="Hello World!">
+        {Card("1", test)}
+        {Card("3", ["4", "2"])}
+      </Section>
+      <Section title="Hello World!">
+        {Card("2", test)}
+        {Card("4", "4321")}
+      </Section>
+      <Section title="Hello World!">
+        {Card("5", test)}
+        {Card("6", "4321")}
+      </Section>
+    </div>
+  );
+}
