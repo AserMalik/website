@@ -43,10 +43,12 @@ Card = (title, cardDetails) => {
   ));
   return (
     <div className="card">
-      <div className="card-context-image" />
-      <div className="card-context-info">
-        <p className="card-title">{title}</p>
-        <ul className="card-subtitle">{listCardDetails}</ul>
+      <div className="blur">
+        <div className="card-context-image" />
+        <div className="card-context-info">
+          <p className="card-title">{title}</p>
+          <ul className="card-data">{listCardDetails}</ul>
+        </div>
       </div>
     </div>
   );
@@ -55,11 +57,16 @@ Card = (title, cardDetails) => {
 export default function App() {
   return (
     <div className="App">
-      <Section title="Hello World!" type="major">
-        {Card("1", test)}
+      <Section title="Hello Work!">
+        {Card("1work", test)}
+        {Card("3", ["4", "2"])}
+        {Card("3", ["4", "2"])}
+        {Card("3", ["4", "2"])}
+        {Card("3", ["4", "2"])}
+        {Card("3", ["4", "2"])}
         {Card("3", ["4", "2"])}
       </Section>
-      <Section title="Hello World!">
+      <Section title="projects">
         {Card("2", test)}
         {Card("4", "4321")}
       </Section>

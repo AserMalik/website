@@ -1,5 +1,12 @@
 body {
   background: #003d66;
+  background: repeating-linear-gradient(
+    to right,
+    #003d66,
+    #003d66 20px,
+    #015085 20px,
+    #015085 40px
+  );
   font-family: Perpetua Light;
   color: white;
 }
@@ -22,8 +29,8 @@ body {
   display: grid;
   grid-template-rows: 97%;
   grid-template-columns: repeat(3, 37%);
-  grid-column-gap: 5rem;
-  overflow-y: scroll;
+  grid-column-gap: 3.7rem;
+  overflow-x: scroll;
 }
 
 @media only screen and (max-width: 768px) {
@@ -40,7 +47,39 @@ body {
   margin: 0.76rem;
 }
 
+.section-minor {
+  font: bold;
+  font-size: 1.3rem;
+  margin-top: -1rem;
+  border: solid green 5px;
+  margin: 0.76rem;
+  overflow-y: scroll;
+  padding-left: 12px;
+  padding-right: 11px;
+}
+
 .card {
   font-size: 1.1rem;
-  border: solid white 5px;
+  border: solid white 0.1px;
+  background: rgba(207, 207, 207, 0.51);
+  backdrop-filter: blur(0.39rem);
+  margin-top: 0.76rem;
+  padding-left: 1.17rem;
+  padding-bottom: 0.27rem;
+  padding-right: 0.4rem;
+  border-radius: 0.81rem;
+  display: grid;
+  grid-template-rows: 97%;
+  grid-template-columns: 31% 69%;
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.7);
+}
+
+.card-title {
+  font-style: bold;
+  margin-top: 0.71rem;
+  margin-bottom: 0.51rem;
 }
