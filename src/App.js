@@ -1,6 +1,5 @@
 import React from "react";
 //import ReactDOM from "react-dom";
-
 import "./styles.css";
 
 export var Section;
@@ -43,12 +42,10 @@ Card = (title, cardDetails) => {
   ));
   return (
     <div className="card">
-      <div className="blur">
-        <div className="card-context-image" />
-        <div className="card-context-info">
-          <p className="card-title">{title}</p>
-          <ul className="card-data">{listCardDetails}</ul>
-        </div>
+      <div className="card-context-image" />
+      <div className="card-context-info">
+        <p className="card-title">{title}</p>
+        <ul className="card-data">{listCardDetails}</ul>
       </div>
     </div>
   );
@@ -69,10 +66,6 @@ export default function App() {
       <Section title="projects">
         {Card("2", test)}
         {Card("4", "4321")}
-      </Section>
-      <Section title="Hello World!">
-        {Card("5", test)}
-        {Card("6", "4321")}
       </Section>
     </div>
   );
