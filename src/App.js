@@ -20,14 +20,14 @@ Section = props => {
   switch (props.type) {
     case "major":
       return (
-        <div className="section-major">
+        <div className="section-major" id={props.id}>
           <h1>{props.title}</h1>
           {props.children}
         </div>
       );
     default:
       return (
-        <div className="section-minor">
+        <div className="section-minor" id={props.id}>
           <h1>{props.title}</h1>
           {props.children}
         </div>

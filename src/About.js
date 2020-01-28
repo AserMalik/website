@@ -1,15 +1,17 @@
 import React from "react";
 import "./styles.css";
+import { Section } from "./App.js";
 
 export default function About() {
   return (
-    <div>
-      <ul className="navBar">
-        <li className="navItem">About</li>
-        <li className="navItem">Experience</li>
-        <li className="navItem">Contact</li>
-        <button className="default-button">Resume</button>
-      </ul>
+    <div className="transformWrapper" id="intro">
+      <Section id="intro">
+        <p className="title">I'm Aser Malik.</p>
+        <p className="subtext">
+          (Pronounced <i>Aser</i> like <i>saucer</i>, <i>Aser saucer.</i>)
+        </p>
+        <p className="subtitle">I like to learn.</p>
+      </Section>
     </div>
   );
 }
