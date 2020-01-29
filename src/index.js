@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import App from "./App.js";
 import About from "./About.js";
 import Navbar from "./Navbar.js";
+import Contact from "./Contact.js";
+import Socks from "./Socks.js";
 
 const rootElement = document.getElementById("root");
 
@@ -16,8 +18,11 @@ ReactDOM.render(
       <App />
     </section>
     <section>
-      <p className="page-title">Title</p>
+      <Contact />
     </section>
+    <footer>
+      <Socks />
+    </footer>
   </div>,
   rootElement
 );

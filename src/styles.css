@@ -1,9 +1,3 @@
-@font-face {
-  font-family: bebasBold;
-  src: url("./fonts/bebasneue-bold-webfont.woff") format("woff");
-  font-weight: bold;
-}
-
 body {
   background: #003d66;
   background: repeating-linear-gradient(
@@ -13,21 +7,9 @@ body {
     #015085 20px,
     #015085 40px
   );
-  font-family: Perpetua Light;
+  font-family: "Perpetua Light", sans-serif;
   color: white;
   overflow-x: hidden;
-}
-
-section {
-  height: 100vh;
-  margin-bottom: 2rem;
-}
-
-#root {
-  width: 100%;
-  max-width: 1600px;
-  min-height: 100vh;
-  margin: 0px auto;
 }
 
 .NavbarWrapper {
@@ -45,11 +27,23 @@ section {
   padding-right: 3.1rem;
   font-size: 1.2rem;
   float: right;
+  font-family: "VT323", monospace;
 }
 
 .navItem {
   display: inline;
-  padding: 1.3rem;
+  margin: 0 15px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+  counter-increment: navItem;
+}
+
+.navItem::before {
+  content: counter(navItem) ". ";
+}
+
+.navItem:hover {
+  color: rgb(50, 182, 50);
 }
 
 .default-button {
@@ -60,7 +54,7 @@ section {
   text-decoration: none;
   display: inline-block;
   margin-left: 1rem;
-  font-family: Perpetua Light;
+  font-family: inherit;
   font-size: 1.2rem;
   border: solid rgba(68, 68, 68, 0) 2px;
   border-radius: 0.2rem;
@@ -78,7 +72,7 @@ section {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #e7e7e763;
+  background-color: #f81515a6;
   border-radius: 2rem;
   padding-right: 1rem;
 }
@@ -91,7 +85,7 @@ section {
 
 .App {
   position: relative;
-  width: 58%;
+  max-width: 1000px;
   height: 71%;
   top: 17%;
   left: 50%;
@@ -100,7 +94,7 @@ section {
   transform: translate(-50%, 0%);
   display: grid;
   grid-template-rows: 97%;
-  padding-left: 2rem;
+  padding: 150px 0px;
   grid-template-columns: repeat(2, 47%);
   grid-column-gap: 2.7rem;
 }
@@ -112,17 +106,25 @@ section {
 }
 
 .section-major {
-  font: bold;
   font-size: 1.3rem;
   margin-top: -1rem;
-  border: solid green 5px;
+  max-width: 600px;
+  border: solid rgba(184, 58, 58, 0.788) 2px;
+  border-radius: 0.4rem;
   margin: 0.76rem;
+  position: relative;
+  transform: translate(-50%, 0);
+  left: 50%;
+  text-align: center;
+}
+
+.section-major-title {
+  font-family: "VT323", monospace;
 }
 
 .section-minor {
-  background: rgba(207, 207, 207, 0.21);
+  background: rgba(207, 207, 207, 0.068);
   max-height: 600px;
-  font: bold;
   font-size: 1.3rem;
   margin-top: -1rem;
   border: solid rgba(68, 68, 68, 0) 2px;
@@ -150,6 +152,10 @@ section {
 
 .section-minor .card {
   padding-left: 0.2rem;
+}
+
+.section-minor-title {
+  font-family: "VT323", monospace;
 }
 
 .transformWrapper {
@@ -211,6 +217,7 @@ section {
 }
 
 .card-title {
+  font-family: "Barlow Condensed", sans-serif;
   font-weight: 2rem;
   margin-top: 0.71rem;
   margin-bottom: 0.51rem;
@@ -222,14 +229,41 @@ section {
 
 .title,
 .subtitle {
-  font-family: Arial sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   font-weight: bold;
   font-size: 4rem;
   margin-bottom: 0px;
   margin-top: -1rem;
 }
 
+.subtitle,
+.subtext {
+  color: rgba(198, 214, 243, 0.788);
+}
+
 .subtext {
   margin-top: -0.5rem;
   font-size: 1rem;
+}
+
+.Contact {
+  display: block;
+  padding: 250px 0px;
+  margin: 0px 276px;
+  margin-bottom: 100px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  left: 0%;
+  width: 100vw;
+  background-color: black;
+  color: rgb(134, 141, 160);
+  text-align: center;
+  height: auto;
+  min-height: 70px;
 }

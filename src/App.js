@@ -1,5 +1,4 @@
 import React from "react";
-//import ReactDOM from "react-dom";
 import "./styles.css";
 
 export var Section;
@@ -21,14 +20,14 @@ Section = props => {
     case "major":
       return (
         <div className="section-major" id={props.id}>
-          <h1>{props.title}</h1>
+          <h1 className="section-major-title">{props.title}</h1>
           {props.children}
         </div>
       );
     default:
       return (
         <div className="section-minor" id={props.id}>
-          <h1>{props.title}</h1>
+          <h1 className="section-minor-title">{props.title}</h1>
           {props.children}
         </div>
       );
@@ -54,7 +53,7 @@ Card = (title, cardDetails) => {
 export default function App() {
   return (
     <div className="App">
-      <Section title="Hello Work!">
+      <Section title="./workXP">
         {Card("1work", test)}
         {Card("3", ["4", "2"])}
         {Card("3", ["4", "2"])}
@@ -63,7 +62,7 @@ export default function App() {
         {Card("3", ["4", "2"])}
         {Card("3", ["4", "2"])}
       </Section>
-      <Section title="projects">
+      <Section title="./projects">
         {Card("2", test)}
         {Card("4", "4321")}
       </Section>
