@@ -7,9 +7,14 @@ body {
     #015085 20px,
     #015085 40px
   );
-  font-family: "Perpetua Light", sans-serif;
+  font-family: "Quicksand", sans-serif;
+  font-size: 50%;
   color: white;
   overflow-x: hidden;
+}
+
+h1 {
+  font-weight: 400;
 }
 
 .NavbarWrapper {
@@ -23,7 +28,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  padding-top: 1.2rem;
+  padding-top: 1.4rem;
   padding-right: 3.1rem;
   font-size: 1.2rem;
   float: right;
@@ -116,6 +121,8 @@ body {
   transform: translate(-50%, 0);
   left: 50%;
   text-align: center;
+  padding: 0px 20px;
+  backdrop-filter: blur(5px);
 }
 
 .section-major-title {
@@ -171,18 +178,19 @@ body {
 .card {
   background: rgba(255, 255, 255, 0.3);
   color: rgb(37, 37, 37);
-  font-size: 1.1rem;
+  /*font-size: 1.1rem;*/
   backdrop-filter: blur(0.61rem);
   margin-bottom: 0.36rem;
-  padding-left: 1.17rem;
-  padding-bottom: 0.27rem;
-  padding-right: 0.4rem;
+  padding-left: 0px;
+  /*padding-bottom: 0.27rem;
+  padding-right: 0.4rem;*/
   border: solid green 0.1px;
   border-radius: 0.41rem;
   display: grid;
   grid-template-rows: 97%;
   grid-template-columns: 31% 69%;
   transition: all 0.2s;
+  overflow: hidden;
   backface-visibility: hidden;
 }
 
@@ -195,6 +203,7 @@ body {
   animation: bounce 0.2s forwards;
   background: rgba(255, 255, 255, 0.4);
   transform: translateZ(0);
+  cursor: pointer;
 }
 
 .card:active {
@@ -219,8 +228,27 @@ body {
 .card-title {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 2rem;
+  font-size: 1.4rem;
   margin-top: 0.71rem;
   margin-bottom: 0.51rem;
+}
+
+.card-data {
+  font-size: 1rem;
+}
+
+.card-context-image {
+  max-width: 100%;
+}
+
+.card-context-image-wrapper {
+  height: 80px;
+  width: 80px;
+  border-radius: 200%;
+  border: solid red 1px;
+  margin-left: 10px;
+  margin-top: 10px;
+  overflow: hidden;
 }
 
 #intro {
@@ -244,6 +272,7 @@ body {
 .subtext {
   margin-top: -0.5rem;
   font-size: 1rem;
+  font-family: "Barlow Condensed", sans-serif;
 }
 
 .Contact {

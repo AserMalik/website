@@ -35,13 +35,15 @@ Section = props => {
 };
 //this should ideally be more modular but it's very small so I avoided it
 
-Card = (title, cardDetails) => {
+Card = (title, cardDetails, image) => {
   const listCardDetails = Array.from(cardDetails).map(cardDetails => (
     <li key={cardDetails.toString()}>{cardDetails}</li>
   ));
   return (
     <div className="card">
-      <div className="card-context-image" />
+      <div className="card-context-image-wrapper">
+        <img className="card-context-image" src={image} alt="project" />
+      </div>
       <div className="card-context-info">
         <p className="card-title">{title}</p>
         <ul className="card-data">{listCardDetails}</ul>
@@ -54,17 +56,17 @@ export default function App() {
   return (
     <div className="App">
       <Section title="./workXP">
-        {Card("1work", test)}
-        {Card("3", ["4", "2"])}
-        {Card("3", ["4", "2"])}
-        {Card("3", ["4", "2"])}
-        {Card("3", ["4", "2"])}
-        {Card("3", ["4", "2"])}
-        {Card("3", ["4", "2"])}
+        {Card("1work", test, "./pictures/rocket.jpg")}
+        {Card("3", ["4", "2"], "./pictures/rocket.jpg")}
+        {Card("3", ["4", "2"], "./pictures/rocket.jpg")}
+        {Card("3", ["4", "2"], "./pictures/rocket.jpg")}
+        {Card("3", ["4", "2"], "./pictures/rocket.jpg")}
+        {Card("3", ["4", "2"], "./pictures/rocket.jpg")}
+        {Card("3", ["4", "2"], "./pictures/rocket.jpg")}
       </Section>
       <Section title="./projects">
-        {Card("2", test)}
-        {Card("4", "4321")}
+        {Card("2", test, "./pictures/rocket.jpg")}
+        {Card("4", "4321", "./pictures/rocket.jpg")}
       </Section>
     </div>
   );
