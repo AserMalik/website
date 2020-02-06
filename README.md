@@ -12,4 +12,4 @@ I built the website over the course of around ~1-2 weeks with variable amounts o
 
 ## What would I do differently if I made it again?
 
-Probably not use React, really. Like I mentioned earlier, Pug might've been simpler and more suited to what I needed. However, if I were to use React again, I'd likely use class instead of functional components. There's a lot I could mess around with using lifecycle and state features that would've made tasks easier for myself. At at the time of writing, I wasn't well aware of the differences and ran with what was more suited to my original purposes.
+Probably not use React, really. Like I mentioned earlier, Pug might've been simpler and more suited to what I needed. However, if I were to use React again, I'd likely use class instead of functional components. There's a lot I could mess around with using lifecycle and state features that would've made tasks easier for myself. At the time of writing, I wasn't well aware of the differences and ran with what was more suited to my original purposes.
